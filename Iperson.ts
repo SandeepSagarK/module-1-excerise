@@ -1,12 +1,12 @@
-// Define an interface for Animals
+// Define an interface for Iperson
 interface Iperson {
     name: string;
     age: number;
     email: string;
-    sayHello();
+    sayHello(): void;
 }
 
-// // Define the Animal class implementing the IAnimal interface
+// // Define the person class implementing the Iperson interface
 
 class person implements Iperson {
 
@@ -24,8 +24,17 @@ class person implements Iperson {
 
     // Method
     sayHello() {
-        console.log("Hello" +this.name);
+        console.log("Hello " + this.name);
     }
 }
 
-person.sayHello("Sandeep");
+// Create instances of person
+const sk: person = new person("SK", 16, "test@test.com");
+const jp: person = new person("JC", 16, "test@test.com");
+const ck: person = new person("CK", 16, "test@test.com");
+const ss: person = new person("Sankara", 16, "tes@test.com");
+
+sk.sayHello();
+jp.sayHello();
+ck.sayHello();
+ss.sayHello();
